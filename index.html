@@ -10,13 +10,44 @@
     
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- top bar -->
+
+
+    <div class="top-bar bg-black py-2">
+        <div class="container d-flex align-items-center text-white">
+            <div class="phone">+92 3423422134</div>
+            <div class="social">
+                <ul class="social_list ">
+
+                    
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-tiktok"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                    
+        
+                
+
+                </ul>
+            </div>
+           
+
+
+
+            
+        </div>
+    </div>
+
+
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
 
 
 
@@ -24,9 +55,9 @@
         
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="#home">
-                <!-- <span class="brand-gold">Aura</span> Catering -->
+                
 
-<img src="./assets/./faraz_logo-removebg-preview.png" width="150px" alt="">
+<img src="./assets/./faraz_logo-removebg-preview.png" width="170px" alt="">
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,7 +65,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link " id = "active-class" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
@@ -42,7 +73,45 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
+
+   <nav class="navbar navbar-expand-lg  bg-light " id="navbar">
+  <div class="container-fluid">
+
+    <!-- left -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+          <li class="nav-item"><a class="nav-link " id = "active-class" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item me-0"><a class="nav-link" href="#booking">Book Now</a></li>
+       
+      </ul>
+      
+    </div>
+    <!-- left -->
+
+    <a class="navbar-brand me-5" href="#">
+        <img src="./assets/faraz_logo-removebg-preview.png" width="160px" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex ms-auto">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      
+    </div>
+  </div>
+</nav>
+
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
