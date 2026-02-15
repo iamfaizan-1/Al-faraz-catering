@@ -18,6 +18,9 @@
     box-sizing: border-box;
 }
 
+/* navbar start*/
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -67,8 +70,19 @@ h1, h2, h3, h4, h5, h6 {
    ================================ */
 
 
-
-
+.navbar-toggler-icon {
+  filter: invert(1)!important; /* makes it white */
+  border: none !important;
+  background-color: none;
+    box-shadow: none;
+}
+.myInput{
+    padding: 3px 0px 3px 8px!important;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  transform: scale(1.05);
+}
 
 #navbar {
     background: linear-gradient(135deg, var(--charcoal) 0%, var(--light-charcoal) 100%);
@@ -96,6 +110,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: var(--gold) !important;
+}
+.mylist{
+    width: 40%;
+}
+.navbar-brand{
+    width: 25%;
+    display: flex;
+    align-items: start;
 }
 
 .nav-link::after {
@@ -580,11 +602,39 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width:991px) {
+
+ .navbar-brand{
+    width: 90%;
+    text-align: center;
+ }
+
+ .navbar-brand{
+    margin-right: 0px!important;
+    align-items: center;
+    justify-content: center;
+    
+ }
+    
+}
+
 @media (max-width: 576px) {
     .hero-title {
         font-size: 1.8rem;
     }
-
+    .navbar-brand{
+        width: 80%!important;
+    }
+    .mycont{
+        padding: 0px;
+    }
+.hero-title{
+    margin-bottom: 20px!important;
+    margin-top: 20px;
+}
+.hero-subtitle{
+    margin-bottom: 20px!important;
+}
     .section-title {
         font-size: 1.6rem;
     }
