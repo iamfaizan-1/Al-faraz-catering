@@ -3,13 +3,16 @@
    ================================ */
 
 :root {
-    --charcoal:#10161c;
-    --light-charcoal: #1b242e;
-    --gold: #d4af37;
-    --soft-gold: #e8c547;
-    --off-white: #f8f6f1;
-    --light-gray: #e8e8e8;
-    --dark-text: #1a1a1a;
+    --charcoal: #0b0f14;
+  --light-charcoal: #141b23;
+
+  --gold: #d4af37;
+  --soft-gold: #f1d27a;
+
+  --off-white: #f8f6f1;
+  --light-gray: #cfcfcf;
+
+  --dark-text: #101010;
 }
 
 * {
