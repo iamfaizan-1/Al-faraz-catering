@@ -40,7 +40,29 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark-text);
     font-weight: 700;
 }
+/* button */
 
+.myBtn{
+    padding: 10px 20px;
+    background-color: var(--gold);
+    color: white;
+    border: none;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.myBtn:hover{
+    opacity: 0.8;
+    transition: all ease 0.5s;
+}
+
+.button-Link{
+    text-decoration: none;
+    
+}
 /* top bar */
 
 
@@ -62,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0px;
 	
 }
+
 .phone{
     font-size: 11px;
 }
@@ -569,6 +592,10 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 10px;
+
+}
+.social-link i{
+    font-size: 20px;
 }
 
 /* ================================

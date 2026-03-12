@@ -1,0 +1,127 @@
+:root {
+    --charcoal: #0b0f14;
+  --light-charcoal: #141b23;
+
+  --gold: #d4af37;
+  --soft-gold: #f1d27a;
+
+  --off-white: #f8f6f1;
+  --light-gray: #cfcfcf;
+
+  --dark-text: #101010;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: white;
+}
+
+
+
+
+.heroimg{
+    /* background-image: url("./assets/1-Mercedes-A-Class.jpg") ; */
+background-image: url("./assets/hero2.avif");
+    height: 650px;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+/* carousel */
+
+
+.custom-img {
+  width: 100%;
+  height: 250px; /* Sab images ki height barabar rahegi */
+  object-fit: cover; /* Images stretch nahi hongi */
+  border-radius: 8px; /* Thoda professional look ke liye */
+  transition: transform 0.3s; /* Hover effect ke liye */
+}
+
+.custom-img:hover {
+  transform: scale(1.03); /* Mouse lane par halka sa zoom */
+}
+
+/* Indicators ya controls ko visible rakhne ke liye padding */
+.carousel-inner {
+  padding: 20px 0;
+}
+
+
+
+/* 1. Main Button Container */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(230, 230, 230, 0.8) !important; /* Halka grey background */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 1 !important; /* Takki arrow halka na dikhe */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 2. Default Bootstrap Icon ko disable karein */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important; /* Purana arrow hatao */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* 3. Naya Grey Arrow Add Karein */
+.carousel-control-prev-icon::after {
+    content: '❮';
+    color: #666666; /* Perfect Grey Color */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.carousel-control-next-icon::after {
+    content: '❯';
+    color: #666666; /* Perfect Grey Color */
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 4. Hover Effect */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #d0d0d0 !important;
+}
+
+/* wedding ceremony*/
+
+
+.heading2{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+}
+
+
+
+/* corporate section */
+
+
+.Corporate-section{
+    background-color: var(--off-white);
+}
+
+.background{
+    background-color: var(--off-white);
+}
