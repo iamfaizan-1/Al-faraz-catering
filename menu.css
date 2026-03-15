@@ -1,0 +1,34 @@
+:root {
+    --charcoal: #0b0f14;
+  --light-charcoal: #141b23;
+
+  --gold: #d4af37;
+  --soft-gold: #f1d27a;
+
+  --off-white: #f8f6f1;
+  --light-gray: #cfcfcf;
+
+  --dark-text: #101010;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: white;
+}
+
+
+
+
+.heroimg{
+    /* background-image: url("./assets/1-Mercedes-A-Class.jpg") ; */
+background-image: url("./assets/hero2.avif");
+    height: 650px;
+    background-position: center center;
+    background-size: cover;
+    
+}
