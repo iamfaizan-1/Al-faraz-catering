@@ -307,3 +307,93 @@ if (guestCountInput) {
         }
     });
 }
+
+
+
+
+
+// booking form
+
+function sendToWhatsApp() {
+    // 1. Get all form values
+    const eventName = document.getElementById('eventName').value;
+    const eventType = document.getElementById('eventType').value;
+    const eventDate = document.getElementById('eventDate').value;
+    const guestCount = document.getElementById('guestCount').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const details = document.getElementById('details').value;
+
+    // 2. Validation: Ensure required fields aren't empty
+    if (!eventName || !name || !phone) {
+        alert("Please fill in the required fields (Event Name, Name, and Phone).");
+        return;
+    }
+
+    // 3. Your Pakistani WhatsApp Number
+    const myNumber = "923311302237";
+
+    // 4. Create the formatted message
+    // %0a = New Line, *text* = Bold in WhatsApp
+    const message = `🌟 *NEW EVENT INQUIRY* 🌟%0a%0a` +
+                    `*Event:* ${eventName}%0a` +
+                    `*Type:* ${eventType}%0a` +
+                    `*Date:* ${eventDate}%0a` +
+                    `*Guests:* ${guestCount}%0a%0a` +
+                    `👤 *Client Details:*%0a` +
+                    `*Name:* ${name}%0a` +
+                    `*Email:* ${email}%0a` +
+                    `*Phone:* ${phone}%0a%0a` +
+                    `📝 *Notes:* ${details}`;
+
+    // 5. Build the URL and Redirect
+    const url = `https://wa.me/${myNumber}?text=${message}`;
+    
+    // Open in a new tab
+    window.open(url, '_blank').focus();
+}
+
+
+
+// navbar
+
+
+
+const button = document.getElementById("bar")
+
+var flag = false
+const changeIcon = ()=>{
+    
+   
+
+if(flag === false){
+    
+ button.innerHTML = `
+   <i class="fa-solid fa-xmark"></i>
+    `
+flag = true;
+
+}
+
+else{
+    button.innerHTML=`
+    <i class="fa-solid fa-bars"></i>
+    `
+    flag = false;
+}
+
+}
+
+button.addEventListener("click",changeIcon)
+
+
+const checkbox = document.getElementById('click');
+
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
+});

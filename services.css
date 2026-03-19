@@ -35,6 +35,10 @@ background-image: url("./assets/hero2.avif");
 
 
 /* carousel */
+.myicon{
+    padding: 25px;
+}
+
 
 
 .custom-img {
@@ -59,7 +63,7 @@ background-image: url("./assets/hero2.avif");
 /* 1. Main Button Container */
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: rgba(230, 230, 230, 0.8) !important; /* Halka grey background */
+   
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -75,7 +79,7 @@ background-image: url("./assets/hero2.avif");
 /* 2. Default Bootstrap Icon ko disable karein */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-image: none !important; /* Purana arrow hatao */
+   
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -83,26 +87,8 @@ background-image: url("./assets/hero2.avif");
     height: auto !important;
 }
 
-/* 3. Naya Grey Arrow Add Karein */
-.carousel-control-prev-icon::after {
-    content: '❮';
-    color: #666666; /* Perfect Grey Color */
-    font-size: 30px;
-    font-weight: bold;
-}
 
-.carousel-control-next-icon::after {
-    content: '❯';
-    color: #666666; /* Perfect Grey Color */
-    font-size: 30px;
-    font-weight: bold;
-}
 
-/* 4. Hover Effect */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: #d0d0d0 !important;
-}
 
 /* wedding ceremony*/
 
@@ -126,3 +112,4 @@ background-image: url("./assets/hero2.avif");
 .background{
     background-color: var(--off-white);
 }
+
