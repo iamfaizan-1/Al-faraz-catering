@@ -35,12 +35,7 @@ body {
     line-height: 1.6;
 }
 
-body:has(#click:checked) {
-    overflow: hidden;
-}
-.no-scroll {
-    overflow: hidden;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', 'Garamond', serif;
@@ -171,7 +166,11 @@ h1, h2, h3, h4, h5, h6 {
    Navigation
    ================================ */
 
-
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
 
 
 #navbar {
@@ -213,11 +212,11 @@ h1, h2, h3, h4, h5, h6 {
    display: none;
 }
 .mylist{
-    width: 40%!important;
+    width: 42%!important;
 }
 .logo{
     width: 38%;
-        margin-right: 25px;
+        /* margin-right: 25px; */
        
 
 }
@@ -860,11 +859,16 @@ gap: 20px;
 
 @media (max-width: 768px) {
 
-
+body:has(#click:checked) {
+    overflow: hidden;
+}
+.no-scroll {
+    overflow: hidden;
+}
 
 
 .logo{
-    width: 90%;
+    width: 95%;
     display: flex;
     justify-content: center;
     padding-left: 30px;
@@ -893,7 +897,8 @@ gap: 20px;
        height: calc(100vh - 80px);
         text-align: center;
         transition: all ease 0.5s;
-        padding: 0px;
+        padding-top: 25px;
+padding-right: 10px;
        
     }
     #click:checked ~ .list{
@@ -1000,9 +1005,12 @@ gap: 20px;
 
 .logo{
         padding-left: 0px;
-        width: 80%;
+        width: 90%;
     }
     
+    .list{
+        padding-right: 55px;
+    }
 
    .sections{
 padding-left: 30px;

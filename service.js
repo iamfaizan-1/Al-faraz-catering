@@ -3,6 +3,8 @@ function openModal(imageSrc) {
     const modalImg = document.getElementById('myimage');
     
     if (modalImg) {
+        
+        modalImg.style.height="500px"
         modalImg.src = ''; // Purani image clear karein
         modalImg.src = imageSrc; // Nayi image set karein
         

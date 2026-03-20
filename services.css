@@ -87,8 +87,33 @@ background-image: url("./assets/hero2.avif");
     height: auto !important;
 }
 
+.modal{
+    z-index: 99999!important;
+}
 
 
+
+#imageModal .btn-close {
+    background-color: var(--gold);
+    /* Dark, slightly transparent background */
+    opacity: 1; /* Make it fully opaque */
+    border-radius: 50%; /* Make it circular */
+    padding: 1rem; /* Increase clickable area */
+    
+    /* Fine-tune position: moves it inward from the edge */
+    top: 15px !important; 
+    right: 15px !important;
+    
+    /* Ensures it's always above the image */
+    z-index: 2; 
+}
+
+/* Optional: Add a subtle hover effect */
+#imageModal .btn-close:hover {
+    
+    transform: scale(1.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
 
 /* wedding ceremony*/
 

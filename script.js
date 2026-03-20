@@ -40,31 +40,63 @@ window.addEventListener('scroll', function() {
 // ================================
 
 const bookingForm = document.getElementById('bookingForm');
-bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Collect form data
-    const formData = {
-        eventName: document.getElementById('eventName').value,
-        eventType: document.getElementById('eventType').value,
-        eventDate: document.getElementById('eventDate').value,
-        guestCount: document.getElementById('guestCount').value,
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        details: document.getElementById('details').value
-    };
-    
-    // Log form data (in a real app, you'd send this to a server)
-    console.log('Booking Inquiry Submitted:', formData);
-    
-    // Show success message
-    showSuccessMessage();
-    
-    // Reset form
-    bookingForm.reset();
-});
 
+if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Validate all fields
+        let isValid = true;
+        const fields = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
+
+        fields.forEach(field => {
+            if (!validateField(field)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            alert("Please fill all fields correctly ❌");
+            return;
+        }
+
+        // Get values
+        const eventName = document.getElementById('eventName').value;
+        const eventType = document.getElementById('eventType').value;
+        const eventDate = document.getElementById('eventDate').value;
+        const guestCount = document.getElementById('guestCount').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const details = document.getElementById('details').value;
+
+        // WhatsApp number
+        const myNumber = "923311302237";
+
+        // Message
+        const message = `🌟 *NEW EVENT INQUIRY* 🌟%0a%0a` +
+                        `*Event:* ${eventName}%0a` +
+                        `*Type:* ${eventType}%0a` +
+                        `*Date:* ${eventDate}%0a` +
+                        `*Guests:* ${guestCount}%0a%0a` +
+                        `👤 *Client Details:*%0a` +
+                        `*Name:* ${name}%0a` +
+                        `*Email:* ${email}%0a` +
+                        `*Phone:* ${phone}%0a%0a` +
+                        `📝 *Notes:* ${details}`;
+
+        const url = `https://wa.me/${myNumber}?text=${message}`;
+
+        // Open WhatsApp
+        window.open(url, '_blank');
+
+        // Show success
+        showSuccessMessage();
+
+        // Reset form
+        bookingForm.reset();
+    });
+}
 // ================================
 // Success Message Notification
 // ================================
@@ -312,47 +344,7 @@ if (guestCountInput) {
 
 
 
-// booking form
 
-function sendToWhatsApp() {
-    // 1. Get all form values
-    const eventName = document.getElementById('eventName').value;
-    const eventType = document.getElementById('eventType').value;
-    const eventDate = document.getElementById('eventDate').value;
-    const guestCount = document.getElementById('guestCount').value;
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const details = document.getElementById('details').value;
-
-    // 2. Validation: Ensure required fields aren't empty
-    if (!eventName || !name || !phone) {
-        alert("Please fill in the required fields (Event Name, Name, and Phone).");
-        return;
-    }
-
-    // 3. Your Pakistani WhatsApp Number
-    const myNumber = "923311302237";
-
-    // 4. Create the formatted message
-    // %0a = New Line, *text* = Bold in WhatsApp
-    const message = `🌟 *NEW EVENT INQUIRY* 🌟%0a%0a` +
-                    `*Event:* ${eventName}%0a` +
-                    `*Type:* ${eventType}%0a` +
-                    `*Date:* ${eventDate}%0a` +
-                    `*Guests:* ${guestCount}%0a%0a` +
-                    `👤 *Client Details:*%0a` +
-                    `*Name:* ${name}%0a` +
-                    `*Email:* ${email}%0a` +
-                    `*Phone:* ${phone}%0a%0a` +
-                    `📝 *Notes:* ${details}`;
-
-    // 5. Build the URL and Redirect
-    const url = `https://wa.me/${myNumber}?text=${message}`;
-    
-    // Open in a new tab
-    window.open(url, '_blank').focus();
-}
 
 
 
