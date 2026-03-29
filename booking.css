@@ -30,3 +30,10 @@ background-image: url("./assets/hero2.avif");
 }
 
 
+/* bookin section */
+
+
+.sec-1,.sec-2,.sec-3{
+    display: flex;
+
+}

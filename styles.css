@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
    padding-top: 4px;
 }
 .myicon{
-      background-color: black;
+      background-color: var(--gold);
     padding: 4px;
      border-radius: 50%;
     height: 30px;
@@ -454,6 +454,18 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
+
+.myicon1{
+      background-color:black;
+    padding: 4px;
+     border-radius: 50%;
+    height: 40px!important;
+    width: 40px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
  .carousel-indicators [data-bs-target] {
   width: 12px;
