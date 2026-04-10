@@ -903,7 +903,7 @@ body:has(#click:checked) {
         font-size: 13px;
         display: block;
         position: fixed;
-        top: 150px;
+        top: 108px;
         left: -100%;
         width: 100%;
        height: calc(100vh - 80px);

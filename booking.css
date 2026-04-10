@@ -37,3 +37,29 @@ background-image: url("./assets/hero2.avif");
     display: flex;
 
 }
+.content h3{
+    font-size: 15px;
+    font-weight: normal;
+}
+.content p{
+    font-size: 13px;
+    color: rgb(143, 145, 149);
+}
+.icon i {
+    color: grey;
+    font-size: 22px;
+}
+
+#navbar{
+    position: fixed ;
+    top: 0px;
+    left : 0px;
+    width: 100%;
+}
+
+@media (min-width: 991px ) and (max-width: 1399px) {
+    .contact-sec2{
+        margin-top: 100px;
+    }
+    
+}

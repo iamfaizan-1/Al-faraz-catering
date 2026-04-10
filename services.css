@@ -32,7 +32,26 @@ background-image: url("./assets/hero2.avif");
     background-size: cover;
     
 }
+.premium{
+    color: var(--gold);
+}
+.hero-section{
+    height: 400px;
+}
+.wedding h4,.corporate h4,.privateDinners h4 {
+font-size: 15px;
+color: var(--gold);
+}
 
+.wedding{
+   
+}
+.top-heading{
+    color:var(--gold)
+}
+.icon{
+    font-size: 30px;
+}
 
 /* carousel */
 .myicon{
