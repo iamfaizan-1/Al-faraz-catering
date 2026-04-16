@@ -55,10 +55,13 @@ h1, h2, h3, h4, h5, h6 {
     gap: 10px;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 .myBtn:hover{
-    opacity: 0.8;
-    transition: all ease 0.5s;
+    background-color: var(--soft-gold);
+   
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
 .myBtn1{
@@ -83,8 +86,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 .myBtn1:hover{
-    opacity: 0.8;
-    transition: all ease 0.5s;
+   background-color: var(--soft-gold);
+   
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
 .button-Link{
@@ -258,10 +263,13 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    transition: all 0.3s ease;
 }
 .contactBtn button:hover{
-    opacity: 0.8;
-    transition: all ease 0.5s;
+   background-color: var(--soft-gold);
+   
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 .Btn-2{
  padding: 10px 30px;

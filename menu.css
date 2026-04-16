@@ -67,16 +67,18 @@ body{
 
   /* Button Styling */
   .btn-outline-gold {
-    border: 1px solid #c5a059;
-    color: #c5a059;
+    border: 1px solid var(--gold);
+    color: var(--gold);
     font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.4s;
   }
   .btn-outline-gold:hover {
-    background-color: #c5a059;
-    color: #000;
+   background-color: #b79433;
+   
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
   }
 
  
