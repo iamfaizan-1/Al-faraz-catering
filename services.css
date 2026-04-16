@@ -21,6 +21,17 @@ body{
     background-color: white;
 }
 
+.img-hover-zoom {
+    transition: transform .5s ease, opacity .5s ease;
+  }
+  .card:hover .img-hover-zoom {
+    transform: scale(1.1);
+    opacity: 1 !important;
+  }
+  .card:hover {
+    border-color: #c5a059 !important;
+    transition: 0.5s;
+  }
 
 
 
@@ -43,9 +54,7 @@ font-size: 15px;
 color: var(--gold);
 }
 
-.wedding{
-   
-}
+
 .top-heading{
     color:var(--gold)
 }
@@ -157,3 +166,85 @@ color: var(--gold);
     background-color: var(--off-white);
 }
 
+
+/* slider */
+/* Container for the carousel to ensure the buttons have room to sit outside if needed */
+#nineImageCarousel {
+    padding: 0 40px; /* Adds space on the sides so buttons don't cover text */
+}
+
+/* Adjusting the appearance of the custom buttons */
+.myicon {
+    background-color: #d4af37; /* The gold/yellow color from your image */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Position the buttons slightly outward */
+.carousel-control-prev {
+    left: -20px;
+    opacity: 1; /* Make sure they are always visible */
+}
+
+.carousel-control-next {
+    right: -20px;
+    opacity: 1;
+}
+
+/* Ensure images fit nicely and don't get cut off */
+.custom-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: matches the soft look of the menu */
+    object-fit: contain;
+}
+
+
+
+/* Fix the horizontal overflow */
+#nineImageCarousel {
+    overflow-x: hidden;
+    padding: 0 10px;
+}
+
+/* Adjust image height to prevent vertical stretching */
+.custom-img {
+    width: 100%;
+    max-height: 70vh; /* Limits height to 70% of screen height on mobile */
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+/* Make buttons responsive */
+@media (max-width: 576px) {
+    .myicon {
+        width: 35px !important;
+        height: 35px !important;
+        background-color: rgba(212, 175, 55, 0.7) !important; /* Semi-transparent */
+    }
+    
+    /* Move buttons slightly outside or to the very edge */
+    .carousel-control-prev {
+        left: 5px;
+    }
+    .carousel-control-next {
+        right: 5px;
+    }
+
+    /* Reduce the gap in the row for mobile */
+    .row.g-4 {
+        --bs-gutter-x: 0.5rem;
+    }
+}
+
+/* Ensure the row doesn't cause horizontal scrolling */
+.carousel-inner .row {
+    margin-right: 0;
+    margin-left: 0;
+}

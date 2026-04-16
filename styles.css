@@ -259,6 +259,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     border-radius: 20px;
 }
+.contactBtn button:hover{
+    opacity: 0.8;
+    transition: all ease 0.5s;
+}
 .Btn-2{
  padding: 10px 30px;
     background-color: var(--gold);
