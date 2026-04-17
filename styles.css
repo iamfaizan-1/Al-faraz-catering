@@ -486,7 +486,10 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
+/* Ensure the parent item has positioning context */
+.carousel-item {
+  position: relative;
+}
 
 
 /* ================================
