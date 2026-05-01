@@ -69,6 +69,8 @@ background-image: url("./assets/hero2.avif");
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.4s;
+    background-color: black;
+    font-weight: normal;
   }
 
   .btn-gold-fill:hover {

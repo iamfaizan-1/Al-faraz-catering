@@ -1,548 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Faraz Catering</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Al-Faraz Catering | Premium Event Catering in Karachi</title>
+  <meta name="description" content="Al-Faraz Catering offers premium catering services for weddings, corporate events, and private dinners in Karachi. Authentic Pakistani cuisine and continental fusion.">
+  <meta name="keywords" content="catering Karachi, wedding catering, corporate catering, Pakistani catering, Al-Faraz catering, event catering">
+  <meta name="author" content="Al-Faraz Catering">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alfarazcatering.com/index.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Al-Faraz Catering | Premium Event Catering in Karachi">
+  <meta property="og:description" content="Premium catering for weddings, corporate events & private dinners. Authentic Pakistani cuisine crafted with passion.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alfarazcatering.com">
+  <meta property="og:image" content="./assets/Elegant_Al_Faraz_catering_logo-removebg-preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/Elegant_Al_Faraz_catering_logo-removebg-preview.png">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./assets/hero 1.png" as="image" fetchpriority="high">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome (only needed icons subset via CDN - use latest stable) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Al-Faraz Catering",
+    "description": "Premium catering services for weddings, corporate events and private dinners in Karachi.",
+    "telephone": "+923311302237",
+    "email": "alfarazcatering@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop no 9, Shamim Residency Yaseenabad, opposite Shamim Garden Banquet",
+      "addressLocality": "Karachi",
+      "addressCountry": "PK"
+    },
+    "url": "https://alfarazcatering.com",
+    "sameAs": [
+      "https://www.instagram.com/alfarazcatering"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-
-<div class="header">
-
-<nav class="navbar" id="navbar">
-     <div class="mylist">
+  <!-- Navigation -->
+  <header class="header" role="banner">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="mylist" role="navigation">
         <ul>
-            <li class="nav-item">
-          <a class="nav-link  active" aria-current="page" href="index.html">Home</a>
-        </li>
-         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link"   href="menu.html">Menu</a></li>
-                   
-                    <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
         </ul>
-    </div>
-    <div class="logo">
-      <img src="./assets/Elegant_Al_Faraz_catering_logo-removebg-preview.png" width="160px" alt="">
-    </div>
+      </div>
 
-   <div class="contactBtn">
-        <a href="tel:03311302237" class="contact-btn text-decoration-none">
-            <button>Contact us</button>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./assets/faraz_logo-removebg-preview.webp" width="160" height="auto" alt="Al-Faraz Catering Logo" fetchpriority="high">
         </a>
-    </div>
+      </div>
 
-    <input type="checkbox" id="click">
-    <label class="bar" for="click" id="bar" >
-        <i class="fa-solid fa-bars"></i>
-    </label>
+      <div class="contactBtn">
+        <a href="tel:+923311302237" class="contact-btn text-decoration-none" aria-label="Call us">
+          <button type="button">Contact us</button>
+        </a>
+      </div>
 
-    <div class="list ">
+      <input type="checkbox" id="click" aria-hidden="true">
+      <label class="bar" for="click" id="bar" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </label>
+
+      <div class="list" role="navigation" aria-label="Mobile navigation">
         <ul>
-            <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="index.html">Home</a>
-        </li>
-         <li class="nav-item"><a class="nav-link" aria-current="page" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link"   href="menu.html">Menu</a></li>
-                   
-                    <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
         </ul>
         <div class="ps-4">
-        <a href="tel:03311302237" class="contact-btn text-decoration-none">
-            <button class="Btn-2">Contact us</button>
-        </a>
-    </div>
-    </div>
-    
-
-
-    
-</nav>
-
-</div>
-
-   
-  <div class="container-fluid p-0">
-     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-   
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/hero 1.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/hero 2.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/hero3 (2).jpg" class="d-block w-100" alt="...">
-    </div>
-
-    <div class="carousel-item">
-      <img src="./assets/hero4.jpg " class="d-block w-100" alt="...">
-    </div>
-     <div class="carousel-item">
-      <img src="./assets/hero5.jpg" class="d-block w-100" alt="...">
-    </div> 
-
-
-
-    
-  </div>
-  <button class="carousel-control-prev previous" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-  <span class="myicon1">
-    <i class="fa-solid fa-angle-left"></i>
-  </span>
-    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-    <span class="visually-hidden">Previous</span>
-
-    
-  </button>
-  <button class="carousel-control-next next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-  <span class="myicon1" >
-     <i class="fa-solid fa-angle-right"></i>
-  </span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-   </div>
-
-
-
-    <!-- Service Cards Section -->
-    <section id="services" class="services-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                        <h3 >Corporate Events</h3>
-                        <p>Impress your clients and team with sophisticated catering tailored to your business needs.</p>
-                        <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./services.html" class="button-Link">
-                                <button class="myBtn">Learn More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </div>
-                        <h3>Weddings</h3>
-                        <p>Create magical culinary moments for your special day with our bespoke wedding catering.</p>
-                        <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./services.html" class="button-Link">
-                                <button class="myBtn">Learn More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="1"/>
-                                <circle cx="19" cy="12" r="1"/>
-                                <circle cx="5" cy="12" r="1"/>
-                            </svg>
-                        </div>
-                        <h3>Private Dinners</h3>
-                        <p>Intimate gatherings deserve exceptional cuisine curated exclusively for you.</p>
-                        <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./services.html" class="button-Link">
-                                <button class="myBtn">Learn More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <a href="tel:+923311302237" class="contact-btn text-decoration-none">
+            <button type="button" class="Btn-2">Contact us</button>
+          </a>
         </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Carousel -->
+  <main>
+    <section aria-label="Hero image carousel " data-aos="fade-down" data-aos-duration="1500">
+      <div class="container-fluid p-0">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/hero 1.webp" class="d-block w-100" alt="Al-Faraz Catering - Elegant event setup" fetchpriority="high">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/hero 2.png" class="d-block w-100" alt="Al-Faraz Catering - Gourmet food display" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/hero3 (2).jpg" class="d-block w-100" alt="Al-Faraz Catering - Wedding catering setup" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/hero4.jpg" class="d-block w-100" alt="Al-Faraz Catering - Corporate event catering" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/hero5.jpg" class="d-block w-100" alt="Al-Faraz Catering - Private dinner arrangement" loading="lazy">
+            </div>
+          </div>
+          <button class="carousel-control-prev previous" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous slide">
+            <span class="myicon1"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next slide">
+            <span class="myicon1"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
     </section>
 
-    <!-- Featured Menu Gallery -->
-    <section id="menu" class="menu-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title">Featured Menu</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/beef biryani.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Beef Raseeli Biryani</h4>
-                            <p>raditional spicy rice layered with tender, slow-cooked beef.</p>
-
-
- <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See more
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/kunafa1.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Kunafa</h4>
-                            <p>Warm shredded pastry layered with melted cheese and syrup</p>
-
- <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/halwa.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Gajar Ka Halwa</h4>
-                            <p>Slow-cooked carrot dessert enriched with khoya and nuts.</p>
-                             <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/dessert.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Raseeli White Biryani</h4>
-                            <p>Creamy Arborio rice infused with black truffles and parmesan</p>
-                             <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/mutton karahi.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Mutton Karahi</h4>
-                            <p>Succulent mutton wok-cooked with fresh ginger and tomatoes.</p>
-                             <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See More
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card">
-                        <div class="menu-image">
-                            <img src="./assets/shahi tikka.jpg" alt="Gourmet Dish">
-                        </div>
-                        <div class="menu-content">
-                            <h4>Tikka</h4>
-                            <p>Succulent, bone-in chicken marinated in fiery tandoori spices</p>
-                             <div class="ButtonDiv d-flex justify-content-center">
-                            <a href="./menu.html" class="button-Link">
-                                <button class="myBtn">See more
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-                
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="text-center mb-5 section-title">Our Services</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" focusable="false">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h3>Corporate Events</h3>
+              <p>Impress your clients and team with sophisticated catering tailored to your business needs.</p>
+              <div class="ButtonDiv d-flex justify-content-center">
+                <a href="./services.html" class="button-Link" aria-label="Learn more about Corporate Events">
+                  <button class="myBtn" type="button">Learn More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" focusable="false">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <h3>Weddings</h3>
+              <p>Create magical culinary moments for your special day with our bespoke wedding catering.</p>
+              <div class="ButtonDiv d-flex justify-content-center">
+                <a href="./services.html" class="button-Link" aria-label="Learn more about Wedding catering">
+                  <button class="myBtn" type="button">Learn More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" focusable="false">
+                  <circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>
+                </svg>
+              </div>
+              <h3>Private Dinners</h3>
+              <p>Intimate gatherings deserve exceptional cuisine curated exclusively for you.</p>
+              <div class="ButtonDiv d-flex justify-content-center">
+                <a href="./services.html" class="button-Link" aria-label="Learn more about Private Dinners">
+                  <button class="myBtn" type="button">Learn More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- The Process Section -->
-    <section id="process" class="process-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title">Our Process</h2>
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4 class="mt-3 mb-3">Consultation</h4>
-                        <p>Meet with our culinary experts to discuss your vision, preferences, and requirements.</p>
-                    </div>
+    <!-- Featured Menu -->
+    <section id="menu" class="menu-section py-5" aria-labelledby="menu-heading">
+      <div class="container">
+        <h2 id="menu-heading" class="text-center mb-5 section-title">Featured Menu</h2>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/beef biryani.webp" alt="Beef Raseeli Biryani - slow-cooked beef layered rice" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Beef Raseeli Biryani</h4>
+                <p>Traditional spicy rice layered with tender, slow-cooked beef.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about Beef Biryani">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4 class="mt-3 mb-3">Tasting</h4>
-                        <p>Sample carefully curated menus to ensure every dish exceeds your expectations.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4 class="mt-3 mb-3">Execution</h4>
-                        <p>On your event day, our team delivers flawless service and exceptional cuisine.</p>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/kunafa1.webp" alt="Kunafa - shredded pastry with melted cheese and syrup" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Kunafa</h4>
+                <p>Warm shredded pastry layered with melted cheese and syrup.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about Kunafa">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/halwa.jpg" alt="Gajar Ka Halwa - carrot dessert with khoya and nuts" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Gajar Ka Halwa</h4>
+                <p>Slow-cooked carrot dessert enriched with khoya and nuts.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about Gajar Ka Halwa">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/dessert.jpg" alt="Raseeli White Biryani - creamy aromatic rice dish" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Raseeli White Biryani</h4>
+                <p>Aromatic basmati rice cooked with tender meat and delicate spices.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about White Biryani">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/mutton karahi.jpg" alt="Mutton Karahi - wok-cooked mutton with ginger and tomatoes" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Mutton Karahi</h4>
+                <p>Succulent mutton wok-cooked with fresh ginger and tomatoes.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about Mutton Karahi">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card">
+              <div class="menu-image">
+                <img src="./assets/shahi tikka.jpg" alt="Tikka - tandoori chicken marinated in spices" loading="lazy" width="400" height="250">
+              </div>
+              <div class="menu-content">
+                <h4>Tikka</h4>
+                <p>Succulent bone-in chicken marinated in fiery tandoori spices.</p>
+                <div class="ButtonDiv d-flex justify-content-center">
+                  <a href="./menu.html" class="button-Link" aria-label="See more about Tikka">
+                    <button class="myBtn" type="button">See More <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section py-5" aria-labelledby="process-heading">
+      <div class="container">
+        <h2 id="process-heading" class="text-center mb-5 section-title">Our Process</h2>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <div class="process-step">
+              <div class="step-number" aria-hidden="true">1</div>
+              <h3 class="mt-3 mb-3">Consultation</h3>
+              <p>Meet with our culinary experts to discuss your vision, preferences, and requirements.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="process-step">
+              <div class="step-number" aria-hidden="true">2</div>
+              <h3 class="mt-3 mb-3">Tasting</h3>
+              <p>Sample carefully curated menus to ensure every dish exceeds your expectations.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="process-step">
+              <div class="step-number" aria-hidden="true">3</div>
+              <h3 class="mt-3 mb-3">Execution</h3>
+              <p>On your event day, our team delivers flawless service and exceptional cuisine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title">Client Testimonials</h2>
-            <div class="carousel slide" id="testimonialCarousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"Both items were tasty and delicious. The charges are also market-competitive, and the best part was the delivery. Even though I changed the delivery time at the last minute, Faraz accommodated it according to my schedule."</p>
-                                <h5 class="mt-4 mb-1">Abdullah Hameed</h5>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"
-
-The food was absolutely delicious and prepared to perfection, while the professional service exceeded all of my expectations. Every detail was handled with care, making it a fantastic experience that I would highly recommend to anyone!"</p>
-                                <h5 class="mt-4 mb-1">Alizain Zulfiqar</h5>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"I had an absolutely wonderful experience with Al Faraz Caterers and couldn't be more impressed. The food quality was outstanding and the taste was spot on, making it a major highlight of the event.
-
-"</p>
-                                <h5 class="mt-4 mb-1">Khizar Shahid</h5>
-                             
-                            </div>
-                        </div>
-                    </div>
+    <section id="testimonials" class="testimonials-section py-5" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 id="testimonials-heading" class="text-center mb-5 section-title">Client Testimonials</h2>
+        <div class="carousel slide" id="testimonialCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <blockquote class="testimonial-text">"Both items were tasty and delicious. The charges are also market-competitive, and the best part was the delivery. Even though I changed the delivery time at the last minute, Faraz accommodated it according to my schedule."</blockquote>
+                  <h5 class="mt-4 mb-1">Abdullah Hameed</h5>
                 </div>
-                <button class="carousel-control-prev test-icon" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next test-icon" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <blockquote class="testimonial-text">"The food was absolutely delicious and prepared to perfection, while the professional service exceeded all of my expectations. Every detail was handled with care, making it a fantastic experience that I would highly recommend to anyone!"</blockquote>
+                  <h5 class="mt-4 mb-1">Alizain Zulfiqar</h5>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <blockquote class="testimonial-text">"I had an absolutely wonderful experience with Al Faraz Caterers and couldn't be more impressed. The food quality was outstanding and the taste was spot on, making it a major highlight of the event."</blockquote>
+                  <h5 class="mt-4 mb-1">Khizar Shahid</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev test-icon" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous testimonial">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next test-icon" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next testimonial">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
+      </div>
     </section>
 
     <!-- Booking Form Section -->
-    <section id="booking" class="booking-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-center mb-5 section-title">Book Your Event</h2>
-                    <form class="booking-form" id="bookingForm">
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="eventName" class="form-label">Event Name</label>
-                                <input type="text" class="form-control" id="eventName" placeholder="e.g., Wedding Reception" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="eventType" class="form-label">Event Type</label>
-                                <select class="form-select" id="eventType" required>
-                                    <option selected disabled>Select event type</option>
-                                    <option>Corporate Event</option>
-                                    <option>Wedding</option>
-                                    <option>Private Dinner</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="eventDate" class="form-label">Event Date</label>
-                                <input type="date" class="form-control" id="eventDate" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="guestCount" class="form-label">Number of Guests</label>
-                                <input type="number" class="form-control" id="guestCount" min="10" placeholder="Minimum 10 guests" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-12">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-12">
-                                <label for="details" class="form-label">Event Details & Preferences</label>
-                                <textarea class="form-control" id="details" rows="4" placeholder="Tell us about your vision..."></textarea>
-                            </div>
-                        </div>
-                      
-          <button type="submit" class="btn btn-gold btn-lg w-100">
-    Submit Inquiry
-</button>
-
-                     
-                    </form>
+    <section id="booking" class="booking-section py-5" aria-labelledby="booking-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 id="booking-heading" class="text-center mb-5 section-title">Book Your Event</h2>
+            <form class="booking-form" id="bookingForm" novalidate>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <label for="eventName" class="form-label">Event Name</label>
+                  <input type="text" class="form-control" id="eventName" placeholder="e.g., Wedding Reception" required autocomplete="off">
                 </div>
-            </div>
+                <div class="col-md-6">
+                  <label for="eventType" class="form-label">Event Type</label>
+                  <select class="form-select" id="eventType" required>
+                    <option value="" disabled selected>Select event type</option>
+                    <option>Corporate Event</option>
+                    <option>Wedding</option>
+                    <option>Private Dinner</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <label for="eventDate" class="form-label">Event Date</label>
+                  <input type="date" class="form-control" id="eventDate" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="guestCount" class="form-label">Number of Guests</label>
+                  <input type="number" class="form-control" id="guestCount" min="10" placeholder="Minimum 10 guests" required>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" required autocomplete="name">
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" required autocomplete="email">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-12">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" required autocomplete="tel">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-12">
+                  <label for="details" class="form-label">Event Details & Preferences</label>
+                  <textarea class="form-control" id="details" rows="4" placeholder="Tell us about your vision..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-gold btn-lg w-100">Submit Inquiry</button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/923311302237?text=Hi!%20I%20have%20a%20question%20about%20your%20services."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.801.982 3.834 1.499 5.888 1.5c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
-<!-- floating button -->
-
-
-<a href="https://wa.me/923311302237?text=Hi! I have a question about your services." 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   aria-label="Chat with us on WhatsApp">
-  
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.801.982 3.834 1.499 5.888 1.5c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-
-    <!-- Footer -->
-    <footer class="footer-section py-5">
-        <div class="container ">
-            <div class="row mb-4">
-                <div class="col-md-6 col-lg-3 col-12 mb-4 sections">
-                    <h5 class="mb-3"><span class="brand-gold">Al-Faraz</span> Caterers</h5>
-                    <p>Delivering exquisite culinary experiences for life's most important moments.</p>
-                </div>
-                <div class="col-md-6 col-lg-3 col-12  mb-4 sections">
-                    <h6 class="mb-3 d-flex gap-2"><i class="fa-solid fa-phone"></i>Contact</h6>
-                       <p class="mt-3"><strong>Phone:</strong> 0331-1302237</p>
-                    <p><strong>Email:</strong> alfarazcatering@gmail.com</p>
-                </div>
-
-                <div class="col-md-6 col-12 col-lg-3  mb-4 sections">
-                    <h6 class="mb-3 d-flex gap-2"><i class="fa-solid fa-location-dot"></i>Address</h6>
-                       <p class="mt-3">Shop no 9, Shamim residency yaseenabad, opposite Shamim garden banquet</p>
-                   
-                </div>
-
-                
-                <div class="col-md-6 col-lg-3 col-12  mb-4 sections last">
-                    <h6 class="mb-3">Connect With Us</h6>
-                    <div class="social-links ">
-                        <div class="social-1">
-                            <a href="https://www.facebook.com/" class="social-link">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        </div>
-                        <div class="social-2">
-                            <a href="https://www.instagram.com/alfarazcatering?igsh=bTQ3aHQ4ams0eHZt" class="social-link">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        </div>
-                        <div class="social-3">
-                            <a href="https://wa.me/923311302237" class="social-link">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy;2026 Al-Faraz Caterers. All rights reserved.</p>
-                </div>
-            </div>
+  <!-- Footer -->
+  <footer class="footer-section py-5" role="contentinfo">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6 col-lg-3 col-12 mb-4 sections">
+          <h5 class="mb-3"><span class="brand-gold">Al-Faraz</span> Caterers</h5>
+          <p>Delivering exquisite culinary experiences for life's most important moments.</p>
         </div>
-    </footer>
+        <div class="col-md-6 col-lg-3 col-12 mb-4 sections">
+          <h6 class="mb-3 d-flex gap-2"><i class="fa-solid fa-phone" aria-hidden="true"></i> Contact</h6>
+          <p class="mt-3"><strong>Phone:</strong> <a href="tel:+923311302237" style="color:#ccc">0331-1302237</a></p>
+          <p><strong>Email:</strong> <a href="mailto:alfarazcatering@gmail.com" style="color:#ccc">alfarazcatering@gmail.com</a></p>
+        </div>
+        <div class="col-md-6 col-12 col-lg-3 mb-4 sections">
+          <h6 class="mb-3 d-flex gap-2"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Address</h6>
+          <address class="mt-3" style="font-style:normal;color:#ccc;font-size:0.9rem;">Shop no 9, Shamim Residency Yaseenabad, opposite Shamim Garden Banquet</address>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12 mb-4 sections last">
+          <h6 class="mb-3">Connect With Us</h6>
+          <div class="social-links">
+            <div class="social-1">
+              <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="social-2">
+              <a href="https://www.instagram.com/alfarazcatering" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="social-3">
+              <a href="https://wa.me/923311302237" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0">&copy; 2026 Al-Faraz Caterers. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  <!-- Bootstrap JS (deferred) -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+  AOS.init();
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

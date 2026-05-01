@@ -1,14 +1,8 @@
+// Opens an image in the modal
 function openModal(imageSrc) {
-    // Pehle element ko pakrein
-    const modalImg = document.getElementById('myimage');
-    
-    if (modalImg) {
-        
-        modalImg.style.height="500px"
-        modalImg.src = ''; // Purani image clear karein
-        modalImg.src = imageSrc; // Nayi image set karein
-        
-    } else {
-        console.error("Error: 'myimage' ID wala element nahi mila.");
-    }
+  const modalImg = document.getElementById('myimage');
+  if (modalImg) {
+    modalImg.src = imageSrc;
+    modalImg.alt = 'Event photo - full size view';
+  }
 }

@@ -1,395 +1,234 @@
 // ================================
-// Smooth Scroll Navigation
+// DOM Ready
 // ================================
+document.addEventListener('DOMContentLoaded', function () {
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-            
-            // Close mobile nav if open
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-                const toggler = document.querySelector('.navbar-toggler');
-                toggler.click();
-            }
-        }
-    });
-});
-
-// ================================
-// Navbar Scroll Effect
-// ================================
-
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+  // ================================
+  // Active Nav Link Highlighting
+  // ================================
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+    link.removeAttribute('aria-current');
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
-});
+  });
 
+  // ================================
+  // Mobile Nav Toggle Icon
+  // ================================
 // ================================
-// Booking Form Handling
+// Mobile Nav Toggle Icon & Resize Fix
 // ================================
+const bar = document.getElementById('bar');
+const clickInput = document.getElementById('click');
 
-const bookingForm = document.getElementById('bookingForm');
+if (bar && clickInput) {
+  // Toggle function
+  clickInput.addEventListener('change', function () {
+    bar.innerHTML = this.checked
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 
-if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    document.body.classList.toggle('no-scroll', this.checked);
+  });
 
-        // Validate all fields
-        let isValid = true;
-        const fields = document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea');
 
-        fields.forEach(field => {
-            if (!validateField(field)) {
-                isValid = false;
-            }
-        });
+  const desktopView = window.matchMedia("(min-width: 768px)");
 
-        if (!isValid) {
-            alert("Please fill all fields correctly ❌");
-            return;
-        }
+  function handleDesktopChange(e) {
+    if (e.matches) {
+     
+      clickInput.checked = false;
+      bar.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+      document.body.classList.remove('no-scroll');
+    }
+  }
 
-        // Get values
-        const eventName = document.getElementById('eventName').value;
-        const eventType = document.getElementById('eventType').value;
-        const eventDate = document.getElementById('eventDate').value;
-        const guestCount = document.getElementById('guestCount').value;
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const details = document.getElementById('details').value;
+  // Listener attach karein
+  desktopView.addEventListener('change', handleDesktopChange);
+  
+  // Initial check (page load par)
+  handleDesktopChange(desktopView);
+}
 
-        // WhatsApp number
-        const myNumber = "923311302237";
+  // ================================
+  // Navbar Scroll Shadow
+  // ================================
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      navbar.style.boxShadow = window.scrollY > 50
+        ? '0 4px 20px rgba(0,0,0,0.2)'
+        : '0 2px 10px rgba(0,0,0,0.1)';
+    }, { passive: true });
+  }
 
-        // Message
-        const message = `🌟 *NEW EVENT INQUIRY* 🌟%0a%0a` +
-                        `*Event:* ${eventName}%0a` +
-                        `*Type:* ${eventType}%0a` +
-                        `*Date:* ${eventDate}%0a` +
-                        `*Guests:* ${guestCount}%0a%0a` +
-                        `👤 *Client Details:*%0a` +
-                        `*Name:* ${name}%0a` +
-                        `*Email:* ${email}%0a` +
-                        `*Phone:* ${phone}%0a%0a` +
-                        `📝 *Notes:* ${details}`;
+  // ================================
+  // Date Input Min Constraint
+  // ================================
+  const dateInput = document.getElementById('eventDate');
+  if (dateInput) {
+    dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+  }
 
-        const url = `https://wa.me/${myNumber}?text=${message}`;
-
-        // Open WhatsApp
-        window.open(url, '_blank');
-
-        // Show success
-        showSuccessMessage();
-
-        // Reset form
-        bookingForm.reset();
+  // ================================
+  // Guest Count Enforcement
+  // ================================
+  const guestCountInput = document.getElementById('guestCount');
+  if (guestCountInput) {
+    guestCountInput.addEventListener('change', function () {
+      if (parseInt(this.value) < 10) this.value = 10;
     });
-}
-// ================================
-// Success Message Notification
-// ================================
+  }
 
-function showSuccessMessage() {
-    const alertDiv = document.createElement('div');
-    alertDiv.className = 'alert alert-success alert-dismissible fade show';
-    alertDiv.role = 'alert';
-    alertDiv.innerHTML = `
-        <strong>Success!</strong> Thank you for your inquiry. We'll contact you shortly to discuss your event.
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    `;
-    
-    const bookingSection = document.getElementById('booking');
-    bookingSection.insertBefore(alertDiv, bookingSection.firstChild);
-    
-    // Auto-dismiss after 5 seconds
-    setTimeout(() => {
-        alertDiv.remove();
-    }, 5000);
-}
+  // ================================
+  // Form Validation - Real-time
+  // ================================
+  document.querySelectorAll('.form-control, .form-select').forEach(field => {
+    field.addEventListener('blur', () => validateField(field));
+    field.addEventListener('input', () => {
+      if (field.classList.contains('is-invalid')) validateField(field);
+    });
+  });
 
-// ================================
-// Intersection Observer for Fade-in Effects
-// ================================
+  // ================================
+  // Booking Form on Homepage
+  // ================================
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', handleFormSubmit);
+  }
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
+  // ================================
+  // Intersection Observer (Fade-in)
+  // ================================
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-            observer.unobserve(entry.target);
+          entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+
+    document.querySelectorAll('.service-card, .menu-card, .process-step').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.animationDelay = `${i * 0.08}s`;
+      observer.observe(el);
     });
-}, observerOptions);
+  }
 
-// Observe service cards
-document.querySelectorAll('.service-card').forEach((el, index) => {
-    el.style.animation = 'none';
-    el.style.opacity = '0';
-    el.style.animationDelay = `${index * 0.1}s`;
-    observer.observe(el);
-});
+  // ================================
+  // Testimonial Carousel
+  // ================================
+  const testimonialEl = document.getElementById('testimonialCarousel');
+  if (testimonialEl && window.bootstrap) {
+    new bootstrap.Carousel(testimonialEl, { interval: 5000, pause: 'hover' });
+  }
 
-// Observe menu cards
-document.querySelectorAll('.menu-card').forEach((el, index) => {
-    el.style.animation = 'none';
-    el.style.opacity = '0';
-    observer.observe(el);
-});
+  // ================================
+  // Smooth Scroll (anchor links)
+  // ================================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
-// Observe process steps
-document.querySelectorAll('.process-step').forEach((el, index) => {
-    el.style.animation = 'none';
-    el.style.opacity = '0';
-    el.style.animationDelay = `${index * 0.1}s`;
-    observer.observe(el);
-});
+}); // end DOMContentLoaded
 
 // ================================
-// Form Validation
+// Form Validation Helper
 // ================================
-
-const inputFields = document.querySelectorAll('.form-control, .form-select');
-inputFields.forEach(field => {
-    field.addEventListener('blur', function() {
-        validateField(this);
-    });
-    
-    field.addEventListener('input', function() {
-        if (this.classList.contains('is-invalid')) {
-            validateField(this);
-        }
-    });
-});
-
 function validateField(field) {
-    const value = field.value.trim();
-    
-    if (!value) {
-        field.classList.add('is-invalid');
-        return false;
+  const value = field.value.trim();
+
+  if (!value) { field.classList.add('is-invalid'); return false; }
+
+  if (field.type === 'email') {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { field.classList.add('is-invalid'); return false; }
+  }
+
+  if (field.id === 'phone') {
+    if (!/^[\d\s\-+()]+$/.test(value) || value.replace(/\D/g, '').length < 10) {
+      field.classList.add('is-invalid'); return false;
     }
-    
-    // Email validation
-    if (field.type === 'email') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-            field.classList.add('is-invalid');
-            return false;
-        }
-    }
-    
-    // Phone validation
-    if (field.id === 'phone') {
-        const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-        if (!phoneRegex.test(value) || value.replace(/\D/g, '').length < 10) {
-            field.classList.add('is-invalid');
-            return false;
-        }
-    }
-    
-    // Date validation (ensure it's in the future)
-    if (field.type === 'date') {
-        const selectedDate = new Date(value);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        
-        if (selectedDate < today) {
-            field.classList.add('is-invalid');
-            return false;
-        }
-    }
-    
-    // Guest count validation
-    if (field.id === 'guestCount') {
-        if (parseInt(value) < 10) {
-            field.classList.add('is-invalid');
-            return false;
-        }
-    }
-    
-    field.classList.remove('is-invalid');
-    return true;
+  }
+
+  if (field.type === 'date') {
+    const selected = new Date(value);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    if (selected < today) { field.classList.add('is-invalid'); return false; }
+  }
+
+  if (field.id === 'guestCount' && parseInt(value) < 10) {
+    field.classList.add('is-invalid'); return false;
+  }
+
+  field.classList.remove('is-invalid');
+  return true;
 }
 
 // ================================
-// Active Nav Link Highlighting
+// Form Submit Handler (shared)
 // ================================
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const fields = form.querySelectorAll('input, select, textarea');
+  let isValid = true;
 
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+  fields.forEach(field => { if (!validateField(field)) isValid = false; });
 
-// ==========================================
-// Multi-Page Active Link Highlighting
-// ==========================================
+  if (!isValid) {
+    form.querySelector('.is-invalid')?.focus();
+    return;
+  }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Current page ka naam nikaalein
-    const currentPath = window.location.pathname.split("/").pop() || 'index.html';
-    
-    // 2. Saare links pakrein (Desktop aur Mobile dono ke)
-    const allLinks = document.querySelectorAll('.nav-link');
+  const data = {
+    eventName: form.querySelector('#eventName')?.value || '',
+    eventType: form.querySelector('#eventType')?.value || '',
+    eventDate: form.querySelector('#eventDate')?.value || '',
+    guestCount: form.querySelector('#guestCount')?.value || '',
+    name: form.querySelector('#name')?.value || '',
+    email: form.querySelector('#email')?.value || '',
+    phone: form.querySelector('#phone')?.value || '',
+    details: form.querySelector('#details')?.value || ''
+  };
 
-    allLinks.forEach(link => {
-        // Pehle purani classes saaf karein
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
+  const message = encodeURIComponent(
+    `🌟 *NEW EVENT INQUIRY* 🌟\n\n` +
+    `*Event:* ${data.eventName}\n*Type:* ${data.eventType}\n*Date:* ${data.eventDate}\n*Guests:* ${data.guestCount}\n\n` +
+    `👤 *Client Details:*\n*Name:* ${data.name}\n*Email:* ${data.email}\n*Phone:* ${data.phone}\n\n` +
+    `📝 *Notes:* ${data.details}`
+  );
 
-        // Agar link ka href page ke naam se match kare
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-            link.setAttribute('aria-current', 'page');
-        }
-    });
-});
-
-// ================================
-// Add CSS for Active Nav Link
-// ================================
-
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--gold) !important;
-    }
-    
-    .nav-link.active::after {
-        width: 100%;
-    }
-`;
-document.head.appendChild(style);
-
-// ================================
-// Testimonial Auto-rotation
-// ================================
-
-const carouselElement = document.getElementById('testimonialCarousel');
-if (carouselElement) {
-    const bootstrap = window.bootstrap; // Declare the bootstrap variable
-    const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 5000,
-        pause: 'hover',
-        ride: 'carousel'
-    });
+  window.open(`https://wa.me/923311302237?text=${message}`, '_blank');
+  showSuccessMessage(form);
+  form.reset();
 }
 
 // ================================
-// Add Stagger Animation to Form Fields
+// Success Notification
 // ================================
+function showSuccessMessage(form) {
+  const existing = document.querySelector('.booking-success-alert');
+  if (existing) existing.remove();
 
-const formGroups = document.querySelectorAll('.f-form > .row');
-formGroups.forEach((group, index) => {
-    group.style.opacity = '0';
-    group.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`;
-});
+  const alert = document.createElement('div');
+  alert.className = 'alert alert-success alert-dismissible fade show booking-success-alert mt-3';
+  alert.setAttribute('role', 'alert');
+  alert.innerHTML = `<strong>Success!</strong> Thank you for your inquiry. We'll contact you shortly.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
 
-// ================================
-// Menu Card Lazy Loading
-// ================================
-
-if ('IntersectionObserver' in window) {
-    const menuImages = document.querySelectorAll('.menu-image img');
-    
-    menuImages.forEach(img => {
-        const src = img.getAttribute('src');
-        
-        const menuObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transition = 'opacity 0.3s ease';
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        menuObserver.observe(img);
-    });
+  form.parentNode.insertBefore(alert, form);
+  setTimeout(() => alert.remove(), 6000);
 }
-
-// ================================
-// Date Input Min Constraint
-// ================================
-
-const dateInput = document.getElementById('eventDate');
-if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
-}
-
-// ================================
-// Guest Count Input Range
-// ================================
-
-const guestCountInput = document.getElementById('guestCount');
-if (guestCountInput) {
-    guestCountInput.addEventListener('change', function() {
-        if (parseInt(this.value) < 10) {
-            this.value = 10;
-        }
-    });
-}
-
-
-
-
-
-
-
-
-
-// navbar
-
-
-
-const button2 = document.getElementById("bar")
-
-var flag = false
-const changeIcon2 = ()=>{
-    
-   
-
-if(flag === false){
-    
- button2.innerHTML = `
-   <i class="fa-solid fa-xmark"></i>
-    `
-flag = true;
-
-}
-
-else{
-    button2.innerHTML=`
-    <i class="fa-solid fa-bars"></i>
-    `
-    flag = false;
-}
-
-}
-
-button2.addEventListener("click",changeIcon2)
-
-
-const checkbox = document.getElementById('click');
-
-checkbox.addEventListener('change', function() {
-    if (this.checked) {
-        document.body.classList.add('no-scroll');
-    } else {
-        document.body.classList.remove('no-scroll');
-    }
-});
