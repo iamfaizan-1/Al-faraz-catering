@@ -234,22 +234,26 @@ function validateField(field) {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
-    let currentSection = '';
+// ==========================================
+// Multi-Page Active Link Highlighting
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Current page ka naam nikaalein
+    const currentPath = window.location.pathname.split("/").pop() || 'index.html';
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 200) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
+    // 2. Saare links pakrein (Desktop aur Mobile dono ke)
+    const allLinks = document.querySelectorAll('.nav-link');
+
+    allLinks.forEach(link => {
+        // Pehle purani classes saaf karein
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === currentSection) {
+        link.removeAttribute('aria-current');
+
+        // Agar link ka href page ke naam se match kare
+        if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
         }
     });
 });
@@ -288,7 +292,7 @@ if (carouselElement) {
 // Add Stagger Animation to Form Fields
 // ================================
 
-const formGroups = document.querySelectorAll('.booking-form > .row');
+const formGroups = document.querySelectorAll('.f-form > .row');
 formGroups.forEach((group, index) => {
     group.style.opacity = '0';
     group.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`;
@@ -352,16 +356,16 @@ if (guestCountInput) {
 
 
 
-const button = document.getElementById("bar")
+const button2 = document.getElementById("bar")
 
 var flag = false
-const changeIcon = ()=>{
+const changeIcon2 = ()=>{
     
    
 
 if(flag === false){
     
- button.innerHTML = `
+ button2.innerHTML = `
    <i class="fa-solid fa-xmark"></i>
     `
 flag = true;
@@ -369,7 +373,7 @@ flag = true;
 }
 
 else{
-    button.innerHTML=`
+    button2.innerHTML=`
     <i class="fa-solid fa-bars"></i>
     `
     flag = false;
@@ -377,7 +381,7 @@ else{
 
 }
 
-button.addEventListener("click",changeIcon)
+button2.addEventListener("click",changeIcon2)
 
 
 const checkbox = document.getElementById('click');

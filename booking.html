@@ -16,54 +16,51 @@
 
 
     <nav class="navbar" id="navbar">
-        <div class="mylist">
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link"  href="index.html">Home</a>
-                </li>
-                <li class="nav-item"><a class="nav-link"  href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+    <!-- 1. Desktop Menu -->
+    <div class="mylist">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
+        </ul>
+    </div>
 
-                <li class="nav-item me-0"><a class="nav-link  active" aria-current="page" href="booking.html">Book Now</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <img src="./assets/Elegant_Al_Faraz_catering_logo-removebg-preview.png" width="160px" alt="">
-        </div>
+    <!-- 2. Logo -->
+    <div class="logo">
+        <img src="./assets/Elegant_Al_Faraz_catering_logo-removebg-preview.png" width="160px" alt="Logo">
+    </div>
 
-        
-            <div class="contactBtn">
+    <!-- 3. Desktop Contact Button (Ye raha!) -->
+    <div class="contactBtn">
         <a href="tel:03311302237" class="contact-btn text-decoration-none">
             <button>Contact us</button>
         </a>
     </div>
 
-        <input type="checkbox" id="click">
-        <label class="bar" for="click" id="bar">
-            <i class="fa-solid fa-bars"></i>
-        </label>
+    <!-- 4. Mobile Menu Toggle -->
+    <input type="checkbox" id="click">
+    <label class="bar" for="click" id="bar">
+        <i class="fa-solid fa-bars"></i>
+    </label>
 
-        <div class="list ">
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-
-                <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
-            </ul>
-            <div class="ps-4">
-        <a href="tel:03311302237" class="contact-btn text-decoration-none">
-            <button class="Btn-2">Contact us</button>
-        </a>
-    </div>
+    <!-- 5. Mobile Side Menu -->
+    <div class="list">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item me-0"><a class="nav-link" href="booking.html">Book Now</a></li>
+        </ul>
+        
+        <!-- Mobile Contact Button (Ye raha!) -->
+        <div class="ps-4">
+            <a href="tel:03311302237" class="contact-btn text-decoration-none">
+                <button class="Btn-2">Contact us</button>
+            </a>
         </div>
-
-
-
-
-    </nav>
+    </div>
+</nav>
 
 
 
@@ -124,76 +121,6 @@
     </section>
 
 
-    <!-- <div class="booking-main">
-       <form class="booking-form" id="bookingForm">
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="eventName" class="form-label">Event Name</label>
-                                <input type="text" class="form-control" id="eventName" placeholder="e.g., Wedding Reception" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="eventType" class="form-label">Event Type</label>
-                                <select class="form-select" id="eventType" required>
-                                    <option selected disabled>Select event type</option>
-                                    <option>Corporate Event</option>
-                                    <option>Wedding</option>
-                                    <option>Private Dinner</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="eventDate" class="form-label">Event Date</label>
-                                <input type="date" class="form-control" id="eventDate" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="guestCount" class="form-label">Number of Guests</label>
-                                <input type="number" class="form-control" id="guestCount" min="10" placeholder="Minimum 10 guests" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-12">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-12">
-                                <label for="details" class="form-label">Event Details & Preferences</label>
-                                <textarea class="form-control" id="details" rows="4" placeholder="Tell us about your vision..."></textarea>
-                            </div>
-                        </div>
-                      
-          <button type="submit" class="btn btn-gold btn-lg w-100">
-    Submit Inquiry
-</button>
-
-                     
-                    </form>
-
-
-<div class="address">
-    <h3>My address</h3>
-</div>
-
-  </div> -->
-
-
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-lg-8 mb-sm-5x booking-main">
@@ -202,7 +129,7 @@
                     <p class="text-muted">Fill out the details below and we'll get back to you.</p>
                 </div>
 
-                <form class="booking-form" id="bookingForm">
+                <form class="booking-form" id="bookingForm2">
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <label for="eventName" class="form-label">Event Name</label>

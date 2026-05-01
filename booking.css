@@ -15,6 +15,10 @@
     margin: 0px;
     padding: 0px;
 }
+.nav-link.active {
+    color: #c5a059 !important; /* Aapka gold color */
+    
+}
 
 
 /* hero */
