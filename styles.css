@@ -40,6 +40,18 @@ img {
   display: block;
 }
 
+/* hero section */
+
+
+.heroimg{
+  background-image: url('./assets/poster\ 1.jpeg');
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+  object-fit:cover;
+
+}
+
 /* ================================
    Utility
    ================================ */
@@ -647,6 +659,22 @@ img {
   }
 }
 
+@media(min-width: 650px) and (max-width:992px){
+  .heroimg{
+
+    background-image: url('./assets/poster\ medium.png');
+  }
+}
+
+@media (max-width:650px){
+  .heroimg{
+
+    background-image: url('./assets/poster\ small.png');
+  }
+}
+
+
+
 /* ================================
    Responsive - Mobile
    ================================ */
@@ -656,6 +684,7 @@ img {
     overflow: hidden;
   }
 
+  
   .logo {
     width: 95%;
     display: flex;
