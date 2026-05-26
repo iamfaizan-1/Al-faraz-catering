@@ -187,6 +187,7 @@
 
 
     <!-- Per Head Gallery -->
+<!-- Per Head Gallery -->
 <section class="container mb-5" aria-labelledby="perhead-heading">
   <div class="PerHead-section d-flex justify-content-center mt-5">
     <h2 id="perhead-heading" class="text-center mb-5 section-title">Per Head</h2>
@@ -194,37 +195,90 @@
 
   <div id="perheadCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
+
+      <!-- Slide 1: Desktop shows 1,2,3 | Mobile shows 1 -->
       <div class="carousel-item active">
         <div class="container">
           <div class="row g-4">
             <div class="col-md-4 col-12">
-              <img src="assets/per head menu1.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 1" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="assets/per head 1.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 1" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
             <div class="col-md-4 d-none d-md-block">
-              <img src="./assets/per head menu 2.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 2" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="./assets/per head 2.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 2" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
             <div class="col-md-4 d-none d-md-block">
-              <img src="./assets/per head menu 3.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 3" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="./assets/per head 3.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 3" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Mobile only: image 2 -->
+      <div class="carousel-item d-md-none">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12">
+              <img src="./assets/per head 2.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 2" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile only: image 3 -->
+      <div class="carousel-item d-md-none">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12">
+              <img src="./assets/per head 3.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 3" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Desktop shows 4,5,6 | Mobile shows 4 -->
       <div class="carousel-item">
         <div class="container">
           <div class="row g-4">
             <div class="col-md-4 col-12">
-              <img src="./assets/per head menu 4.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 4" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="./assets/per head 4.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 4" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
             <div class="col-md-4 d-none d-md-block">
-              <img src="./assets/per head menu 5.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 5" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="./assets/per head 5.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 5" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
             <div class="col-md-4 d-none d-md-block">
-              <img src="./assets/per head menu 6.jpeg" class="img-fluid custom-img clickable-img" alt="Per head catering 6" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+              <img src="./assets/per head 6.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 6" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Mobile only: image 5 -->
+      <div class="carousel-item d-md-none">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12">
+              <img src="./assets/per head 5.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 5" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile only: image 6 -->
+      <div class="carousel-item d-md-none">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12">
+              <img src="./assets/per head 6.jpg" class="img-fluid custom-img clickable-img" alt="Per head catering 6" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+            </div>
+          </div>
+        </div>
+      </div>
+
      
+
+
+      
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#perheadCarousel" data-bs-slide="prev" aria-label="Previous">
       <span class="myicon"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></span>
@@ -374,7 +428,22 @@
           </div>
 
 
-          
+            <div class="carousel-item ">
+              <div class="container">
+                <div class="row g-4">
+                  <div class="col-md-4 col-12">
+                    <img src="assets/private 4.jpg" class="img-fluid custom-img clickable-img" alt="Private dinner catering 1" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+                  </div>
+                  <div class="col-md-4 d-none d-md-block">
+                    <img src="./assets/private 5.jpg" class="img-fluid custom-img clickable-img" alt="Private dinner catering 2" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+                  </div>
+                  <div class="col-md-4 d-none d-md-block">
+                    <img src="./assets/private 6.jpg" class="img-fluid custom-img clickable-img" alt="Private dinner catering 3" loading="lazy" onclick="openModal(this.src)" data-bs-toggle="modal" data-bs-target="#imageModal">
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
 
 
