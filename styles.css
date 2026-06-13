@@ -225,11 +225,15 @@ img {
   font-size: 11px;
 }
 
-.contactBtn button:hover,
+
 .Btn-2:hover {
-  background-color: var(--soft-gold);
+  
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+
+}
+
+.contactBtn button:hover{
+    transform: translateY(-2px);
 }
 
 .bar {
@@ -669,7 +673,7 @@ img {
 @media (max-width:650px){
   .heroimg{
 
-    background-image: url('./assets/poster\ small.png');
+    background-image: url('./assets/poster\ small.webp');
   }
 }
 
