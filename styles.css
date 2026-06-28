@@ -174,7 +174,7 @@ img {
   transition: box-shadow 0.3s ease;
   display: flex;
   align-items: center;
-  padding: 15px 10px;
+  padding: 0px 10px;
   color: white;
 }
 
